@@ -20,6 +20,18 @@
         } catch (e) {}
       })();
     </script>
+    <script type="text/javascript">
+      (function(l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search.slice(1).split('&').map(function(s) {
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
     <style>html{background-color:#f7f9fa}html[data-theme=dark]{background-color:#111418}</style>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -28,7 +40,7 @@
       rel="stylesheet"
     />
     <title>NITI — Learn. Intern. Get Certified.</title>
-    <script type="module" crossorigin src="/code-sphere-niti-ui-build/assets/index-pX35SxnE.js"></script>
+    <script type="module" crossorigin src="/code-sphere-niti-ui-build/assets/index-Blel_3Xr.js"></script>
     <link rel="modulepreload" crossorigin href="/code-sphere-niti-ui-build/assets/free-solid-svg-icons-DMygj8XA.js">
     <link rel="modulepreload" crossorigin href="/code-sphere-niti-ui-build/assets/chunk-OB3PAWPO-BS40wSec.js">
     <link rel="modulepreload" crossorigin href="/code-sphere-niti-ui-build/assets/properties-DZTmt40v.js">
